@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+  seng472_ext:
+    container_name: seng472_ext
+    ports:
+      - "3005:3000"
+    build: .
+    restart: always
+    environment:
+      - VIRTUAL_HOST=${DOMAIN}
+      - VIRTUAL_PORT=3005
+      - uid=1000
+      - gid=1000
