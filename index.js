@@ -18,7 +18,7 @@ app.post("/chat", async (req, res) => {
   let aiResponse = await openAi.chat.completions.create({
     model: "gpt-4o",
     messages,
-    temperature: 1,
+    temperature: 0.2,
     response_format: { type: "json_object" },
   });
   res.json(aiResponse);
